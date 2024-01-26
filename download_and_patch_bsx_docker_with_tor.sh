@@ -18,8 +18,3 @@ sed -i 's|CMD tor -f /etc/tor/torrc|CMD tor -f /etc/tor/torrc --allow-missing-to
 
 # Modify the docker-compose file:
 sed -i '/stop_grace_period: 5m/a \ \ \ \ \ \ \ \ depends_on:\n \ \ \ \ \ \ \ \ \ \ \ - tor' docker-compose_with_tor.yml
-
-# Prepare the BasicSwap installation. 
-# See the readme file https://github.com/tecnovert/basicswap/blob/master/doc/install.md for more info on how to add/remove more coins
-docker compose -f docker-compose_with_tor.yml run -e TOR_PROXY_HOST=172.16.238.200 --rm swapclient \
-        basicswap-prepare --usetorproxy --datadir=/coindata --withcoins=bitcoin,particl --usebtcfastsync
