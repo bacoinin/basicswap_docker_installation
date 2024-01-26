@@ -1,4 +1,4 @@
-# basicswap_docker_installation
+### basicswap_docker_installation_with_Tor
 
 #### Run the "download_and_patch_bsx_docker_with_tor.sh" bash script that clones the BasicSwap DEX repo and patches the Tor Dockerfile and the docker-compose_with_tor.yml files
 
